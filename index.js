@@ -1,50 +1,50 @@
-//Strings
-let firstName = "Kennedy";
-let lastName = "Aduwa";
-console.log(firstName);
-console.log(lastName);
+function greet() {
+    console.log("Hello, Welcome to Javascript!");
+}
 
-//Numbers
-let age = 25;
-let price = 99.99;
-console.log(age);
-console.log(price);
+greet();
+greet();
+greet();
 
-//Booleans
-let isStudent = true;
-let isMarried = false;
-console.log(isStudent);
-console.log(isMarried);
+function greetPerson(name) {
+console.log(`Hello, ${name}, welcome to Javascript!`)
+}
 
-//Undefined
-let score;
-console.log(score);
+greetPerson("Kennedy");
+greetPerson("Brian");
+greetPerson("Alice");
 
-//Null
-let car = null;
-console.log(car);
+function addNumbers (a, b) {
+    return a+b;
+}
 
-//Arrays
-let fruits = ["mango", "banana", "avocado"];
-console.log(fruits);
+let result = addNumbers(10, 5);
+console.log("Sum:", result);
+console.log("Sum:", addNumbers(100, 200));
 
-//Objects
-let person = {
-    firstName: "Kennedy",
-    age: 25,
-    country: "Kenya"
-};
-console.log(person);
+function getGrade(score) {
+    if (score >= 90) {
+        return "A";
+    } else if (score >= 80) {
+        return "B";
+    } else if (score >= 70) {
+        return "C";
+    } else {
+        return "F";
+    }
+    }
+    
+    console.log("Grade for 95:", getGrade(95));
+    console.log("Grade for 82:", getGrade(82));
+    console.log("Grade for 60:", getGrade(60));
 
-//Combining  strings - old way
-let fullName = firstName + " " + lastName;
-console.log(fullName);
+    function calculateArea(width, height) {
+        return width*height;
+    }
 
-//Combining strings - modern way (template literals)
-let greeting = `My name is ${firstName} ${lastName} and I am ${age} years old` ;
-console.log(greeting);
-
-
+    let area = calculateArea(10, 5);
+    console.log("Area:", area);
+    console.log("Area:", calculateArea(200, 100));
 
 
 
