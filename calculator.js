@@ -45,30 +45,33 @@ if (typeof a !== "number" || typeof b !== "number") {
     }
 
     if (operation === "+") {
-        return(`${a} + ${b} = ${a+b}`);
+        console.log(`${a} + ${b} = ${a+b}`);
     }
     else if (operation === "-") {
-        return(`${a} - ${b} = ${a-b}`);
+        console.log(`${a} - ${b} = ${a-b}`);
     }
     else if (operation === "*") {
-        return(`${a} * ${b} = ${a*b}`);
+        console.log(`${a} * ${b} = ${a*b}`);
     }
     else if(operation === "/") {
-        if (b === 0) return("Cannot divide by zero");
-        return(`${a} / ${b} = ${a/b}`);
+        if (b === 0) {
+            console.log("Cannot divide by zero");
+            return;
+        }
+        console.log(`${a} / ${b} = ${a/b}`);
     }
     else if(operation === "power") {
-        return(`${a} ** ${b} = ${a**b}`);
+        console.log(`${a} ** ${b} = ${a**b}`);
     }
     else {
         console.log("Invalid operation");
     }
 }
 
-console.log(calculate(10, "+", 5));
-console.log(calculate(20, "-", 8));
-console.log(calculate(6, "*", 7));
-console.log(calculate(15, "/", 3));
-console.log(calculate(10, "/", 0));
-console.log(calculate("Kennedy", "+", 5));
-console.log(calculate(9, "power", 7));
+calculate(10, "+", 5);
+calculate(20, "-", 8);
+calculate(6, "*", 7);
+calculate(15, "/", 3);
+calculate(10, "/", 0);
+calculate("Kennedy", "+", 5);
+calculate(9, "power", 7);
