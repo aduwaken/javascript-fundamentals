@@ -1,11 +1,29 @@
-let prices = [100, 250, 75, 500, 30, 800];
+let user = {
+    name: "kennedy",
+    skills: ["JavaScript", "Git", "HTML"],
+    address: {
+        city: "Nairobi",
+        country: "Kenya",
+    }
+};
 
-let affordable = prices.filter(function(price) {
-    return price < 200;
-});
-console.log("Affordable:", affordable);
+console.log(user.name);
+console.log(user.skills);
+console.log(user.skills[0]);
+console.log(user.address.city);
+console.log(user.address.country);
 
-let withTax =prices.map(function(price) {
-    return (price * 1.16).toFixed(2);
+let users = [
+    { name: "Kennedy", age: 25 },
+    { name: "Brian", age: 30 },
+    { name: "Alice", age: 28 }
+];
+
+console.log(users[0].name);
+console.log(users[1].age);
+console.log(users[2].name);
+
+users.forEach(function(user) {
+    console.log(`${user.name} is ${user.age} years old`)
 });
-console.log("Withtax:", withTax);
+
